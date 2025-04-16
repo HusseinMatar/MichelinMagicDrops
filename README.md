@@ -29,7 +29,7 @@ Each member contributed with their unique skills:
 
 🔗 **Live Preview:** [Click to visit the website]
 
-(https://husseinjmatar.github.io/MichelinMagicDrops)
+https://husseinmatar.github.io/MichelinMagicDrops/
 
 > ⚠️ Note: This website is optimized for desktop and large screens only.
 
