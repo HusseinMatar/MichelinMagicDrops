@@ -491,6 +491,7 @@ section {
   margin: 0 auto;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  margin-left: 12rem;
 }
 
 .view-computo-btn {
@@ -547,6 +548,7 @@ section {
   justify-items: stretch;
   align-items: stretch;
   visibility: hidden;
+  margin-left: 8rem;
 }
 
 .grid-box.show {
