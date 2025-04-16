@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michelin Green Innovation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-piechart-outlabels"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+      <!-- Put this message at the top of your <body> -->
+    <div class="mobile-warning">
+      <div class="mobile-warning-content">
+      ⚠️ Questo sito è stato progettato per essere visualizzato su schermi di grandi dimensioni, come computer e monitor.
+      Per un'esperienza ottimale, ti consigliamo di accedere da un dispositivo desktop o laptop.
+      </div>
+    </div>
+
+
+  <!-- Logo Sidebar -->
+  <div class="logo-column">
+    <a href="https://www.unito.it/ricerca-e-innovazione/dalle-idee-al-mercato/students-challenge/michelin-students-green-challenge" target="_blank" class="logo-container">
+      <img src="assets/logos/studentChallenge.png" class="logo" alt="studentChallenge Logo" />
+    </a>
+    <a href="https://ecs-nodes.eu/" target="_blank" class="logo-container">
+      <img src="assets/logos/nodesTransparent.png" class="logo fix-nodes" alt="Nodes Logo" />
+    </a>
+    <a href="https://www.michelin.it/motorbike/browse-tyres/all-tyres?utm_source=googleads&utm_medium=paidsearch&utm_campaign=22351010391&utm_content=nonbrand&gad_source=1&gbraid=0AAAAADSHzVRKHd4bo-h-cIK5zxTA5Vfdt&gclid=Cj0KCQjwh_i_BhCzARIsANimeoENcXBQ-PazQPnEAPtLMxSUUofQkU8Z2636n2xD6Z8_Z3cd0dieTAgaAjDrEALw_wcB&gclsrc=aw.ds" target="_blank" class="logo-container">
+      <img src="assets/logos/michelin.png" class="logo" alt="Michelin Logo" />
+    </a>
+    <a href="https://www.unito.it/" target="_blank" class="logo-container">
+      <img src="assets/logos/unito.png" class="logo" alt="UniTo Logo" />
+    </a>
+  </div>
+
+  <!-- Navigation Header -->
+  <header>
+    <nav>
+      <a href="#hero" data-target="hero">La Sfida</a>
+      <a href="#viaggio" data-target="viaggio">Il Viaggio della Condensata</a>
+      <a href="#solution" data-target="solution">Efficienza Che Conviene</a>
+      <a href="#steps" data-target="steps">L’Impatto</a>
+      <a href="#roadmap" data-target="roadmap">Roadmap</a>
+      <a href="#impact" data-target="impact">Verso un Futuro Sostenibile</a>
+      <a href="#team" data-target="team">MAGIC DROPS</a>
+      <a href="#qa" data-target="qa">Q&A</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <video autoplay muted loop playsinline class="hero-bg-video">
+      <source src="videos/vecteezy_turbine-fill-air-into-waste-water-at-treatment-plant_6600954 (online-video-cutter.com).mp4" type="video/mp4" />
+      Il tuo browser non supporta i video HTML5.
+    </video>
+    <div class="hero-content animate-in">
+      <h1>Ogni Goccia Conta</h1>
+      <p>Dopo la vulcanizzazione,<br>il vapore si trasforma in acqua condensata.<br>Ma quest’acqua, <strong>ricca di calore e potenziale</strong> — <br> viene spesso sprecata, e non trattata.</p>
+      <a href="assets/photos/vulcanizzazioneFoto.png" class="my-button" target="_blank">Che cos'è la vulcanizzazione?</a>
+      <a href="#viaggio" class="my-button">Scopri la Nostra Soluzione</a>
+    </div>
+  </section>
+
+<!-- Viaggio Section -->
+<section id="viaggio" class="viaggio-section">
+  <div class="flow-wrapper" id="flowWrapper">
+    <img
+      src="assets/process/Screenshot 2025-04-15 224456.png"
+      id="flowImage"
+      alt="Processo della Condensata"
+    />
+  </div>
+</section>
+
+ 
+
+<!-- ✅ Updated HTML Structure -->
+<section id="solution" class="solution-section">
+
+<!-- ✅ Row: Main cost block with updated data -->
+<div class="solution-box combined-cost-full step-1 hidden">
+  <div class="cost-full-left">
+    <h3>Costi Totali</h3>
+    <p class="total-cost">€ 659.624,48</p>
+    <a href="assets/pdf/COMPUTO PROGETTO MICHELIN Finale.pdf" target="_blank" class="my-button view-computo-btn">
+      Visualizza il Computo
+    </a>       
+  </div>
+
+  <div class="cost-full-center">
+    <canvas id="costPieChart"></canvas>
+  </div>
+
+  <div class="cost-legend">
+    <div><span style="background:#f44336;"></span> Computo metrico (74.73%)</div>
+    <div><span style="background:#a5d6a7;"></span> Smaltimento scarti (2.47%)</div>
+    <div><span style="background:#ffeb3b;"></span> Oneri e sicurezza (11.21%)</div>
+    <div><span style="background:#4caf50;"></span> Collaudi (1.48%)</div>
+    <div><span style="background:#ff9800;"></span> Autorizzazioni (0.75%)</div>
+    <div><span style="background:#ffc107;"></span> Cantiere (1.87%)</div>
+    <div><span style="background:#9c27b0;"></span> Imprevisti (7.47%)</div>
+  </div>         
+</div>
+     
+
+<div class="grid-row-boxes">
+  <!-- Box 1 -->
+  <div class="grid-box step-2 hidden">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>Risparmio Annuo Stimato</h3>
+      </div>
+      <div class="flip-card-back">
+        <p>
+            175.000 (acqua) +
+            140.168 (CO₂) +
+            <br>93.764 (energia)
+            =<br> <strong class="highlight-sum">€ 408.932</strong>          
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Box 2 -->
+  <div class="grid-box step-3 hidden">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>Tempo di recupero senza incentivi</h3>
+      </div>
+      <div class="flip-card-back">
+        <strong class="highlight-sum">2 anni, 7 mesi e 11 giorni</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Box 3 -->
+  <div class="grid-box step-4 hidden">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>Incentivi Disponibili</h3>
+      </div>
+      <div class="flip-card-back">
+        <ul class="incentive-list">
+          <li><strong>PR FESR 2021-2027 (10%)</strong>: <span class="incentive-amount">€ 65.962,45</span></li>
+          <li><strong>Credito d'imposta Transizione 5.0</strong>: <span class="incentive-amount"><br>€ 140.000,00</span></li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Box 4 -->
+  <div class="grid-box step-5 hidden">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>Tempo di recupero con incentivi</h3>
+      </div>
+      <div class="flip-card-back">
+        <strong class="highlight-sum">2 anni e 26 giorni</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+
+  <!-- graphs Section -->
+  <section id="steps">
+    <h2 class="section-title">💧 20 Anni di Risparmio Idrico ed Energetico grazie alla Nostra Soluzione</h2>
+    
+    <div class="image-swap-container" id="imageSwapContainer">
+      <img src="assets/grafi/grafico1_with_border.jpeg" class="graph-img active" alt="Grafico 1">
+      <img src="assets/grafi/grafico2.jpeg" class="graph-img" alt="Grafico 2">
+    </div>
+  </section>
+  
+  <!-- Roadmap Section -->
+  <section id="roadmap" class="roadmap-section">
+    <div class="roadmap-image-container">
+      <img src="assets/photos/roadMapPhoto.jpeg" alt="Roadmap" class="roadmap-img">
+    </div>
+  </section>
+  
+
+  <!-- Impact Quote Section -->
+  <section id="impact">
+    <p class="quote">Vediamo anche ai nostri giorni grandissime innovazioni esser nate entro i confini d'una mera sagacità pratica</p>
+    <p class="author">– Carlo Cattaneo</p>    
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="team-section">
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="assets/profilepics/christian.jpeg" alt="Christian De Benedittis" />
+        <h3>Christian De Benedittis</h3>
+        <p>Studente di Economia Aziendale</p>
+      </div>
+      <div class="team-member">
+        <img src="assets/profilepics/edoardo.png" alt="Edoardo Filippa" />
+        <h3>Edoardo Filippa</h3>
+        <p>Studente di Economia Aziendale</p>
+      </div>
+      <div class="team-member">
+        <img src="assets/profilepics/maurizio.jpeg" alt="Maurizio Coassolo" />
+        <h3>Maurizio Coassolo</h3>
+        <p>Studente di DIMS</p>
+      </div>
+      <div class="team-member">
+        <img src="assets/profilepics/edgar.jpeg" alt="Edgar Chilom" />
+        <h3>Edgar Chilom</h3>
+        <p>Studente di Matematica</p>
+      </div>
+      <div class="team-member">
+        <img src="assets/profilepics/hussein.jpeg" alt="Hussein Matar" />
+        <h3>Hussein Matar</h3>
+        <p>Studente di Informatica</p>
+      </div>
+      <div class="team-member mentor">
+        <img src="assets/profilepics/federica.jpeg" alt="Federica Ghilardi" />
+        <h3>Federica Ghilardi</h3>
+        <p>Assegnista di ricerca in Scienze Agrarie</p>
+      </div>
+    </div>
+  </section>
+  
+
+
+<!-- Q&A Section -->
+<section id="qa" class="qa-section">
+  <div class="qa-header">
+    <h2>❓ Domande & Risposte</h2>
+  </div>
+
+  <div class="qa-pdf-row">
+    <div class="qa-pdf-circle">
+      <a href="assets/pdf/Sezione Fornitori ipotetici.pdf" target="_blank" class="qa-pdf-button">Fornitori ipotetici</a>
+    </div>
+    <div class="qa-pdf-circle">
+      <a href="assets/pdf/Spiegazione Risparmio annuo stimato.pdf" target="_blank" class="qa-pdf-button">Calcolo del Risparmio</a>
+    </div>
+    <div class="qa-pdf-circle">
+      <a href="assets/pdf/SWOT DEFINITIVA.pdf" target="_blank" class="qa-pdf-button">Analisi SWOT</a>
+    </div>
+    <div class="qa-pdf-circle">
+      <a href="assets/pdf/Sezione Road Map di implementazione.pdf" target="_blank" class="qa-pdf-button">RoadMap</a>
+    </div>
+    <div class="qa-pdf-circle">
+      <a href="assets/pdf/planimetria impianto michelin (1).pdf" target="_blank" class="qa-pdf-button">Planimetria Michelin</a>
+    </div>
+    <div class="qa-pdf-circle">
+      <a href="assets/pdf/Analisi dei Competitors.pdf" target="_blank" class="qa-pdf-button">Analisi dei Competitor</a>
+    </div>
+  </div>
+</section>
+
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Team Michelin Challenge – Collaborazione UniTo & NODES</p>
+  </footer>
+  <script>
+    function checkMobileWarning() {
+      const isMobile = window.innerWidth <= 1450;
+      const warning = document.querySelector('.mobile-warning');
+  
+      if (isMobile) {
+        warning.style.display = 'flex';
+        document.body.classList.add('mobile-hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        warning.style.display = 'none';
+        document.body.classList.remove('mobile-hidden');
+        document.body.style.overflow = 'auto';
+      }
+    }
+  
+    // Run on load AND on resize
+    window.addEventListener('DOMContentLoaded', checkMobileWarning);
+    window.addEventListener('resize', checkMobileWarning);
+  </script>
+  
+</body>
+</html>
